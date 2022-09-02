@@ -1,0 +1,238 @@
+:root {
+  --primary-text-color: #555555;
+  --second-text-color: #303030;
+  --accent-color: #ff6c00;
+  /* --white-color: #ffffff; */
+  /* TODO замінити колір */
+  --white-color: green;
+  --sub-title-text: rgba(157, 164, 189, 0.6);
+  --text-online-boolimg: rgba(157, 164, 189, 0.4);
+  --dart-text: #9da4bd;
+  --transparent-color: rgba(255, 255, 255, 0);
+  --second-background-color: #f7f7f7;
+  --online-background: #191c26;
+  --primary-font-family: "Open Sans", sans-serif;
+  --title-font-family: "Raleway", sans-serif;
+}
+
+/* Global elements */
+body {
+  font-size: 18px;
+  line-height: 1.67;
+
+  font-family: var(--primary-font-family);
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
+}
+
+/* General settings for list */
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* General settings for Title */
+.title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  font-family: var(--title-font-family);
+  letter-spacing: 0.05em;
+
+  color: var(--second-text-color);
+}
+
+.title.white-title {
+  color: var(--white-color);
+}
+
+/* General settings for sub-titles */
+.sub-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--second-text-color);
+
+  text-transform: uppercase;
+}
+.sub-title.dark {
+  color: var(--sub-title-text);
+}
+
+/* General settings for button */
+.button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: var(--second-text-color);
+  background-color: var(--transparent-color);
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+}
+
+.button.white {
+  color: var(--white-color);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--accent-color);
+}
+
+/* Section Header */
+.header {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--white-color);
+  /* TODO Delete background-color */
+  background-color: var(--dart-text);
+}
+
+.header .link {
+  color: inherit;
+}
+.header .link:hover,
+.header .link:focus {
+  color: var(--accent-color);
+}
+
+/* Section Hero */
+.hero {
+  color: var(--dart-text);
+}
+
+.hero .link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  color: var(--second-text-color);
+}
+
+.hero .link:hover,
+.hero .link:focus {
+  color: var(--accent-color);
+}
+
+.hero-title {
+  font-family: "Raleway";
+
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: var(--white-color);
+}
+
+/* Section About */
+.about .about-text {
+  font-size: 14px;
+  line-height: 1.86;
+}
+/* Section Price */
+.price {
+  color: var(--dart-text);
+}
+
+/* Section advantage */
+.advantage .list {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--second-text-color);
+  text-align: center;
+}
+
+.advantage .feature {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  color: var(--second-text-color);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.advantage .plus {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+
+  text-align: center;
+
+  color: var(--accent-color);
+}
+
+/* Section Barbers */
+.barbers {
+  background-color: var(--second-background-color);
+}
+
+.barbers .type-barber {
+  font-size: 14px;
+  line-height: 1.36;
+
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.barbers .link:hover,
+.barbers .link:focus {
+  color: var(--accent-color);
+}
+
+/* Section online booking */
+.online {
+  background-color: var(--online-background);
+}
+
+/* Section Contacts */
+.contacts,
+.contacts .link {
+  font-size: 18px;
+  line-height: 1.67;
+
+  color: var(--dart-text);
+}
+
+.contacts .sub-title {
+  color: var(--white-color);
+}
+
+.contacts .link.map {
+  font-weight: 700;
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
+/* Section Footer */
+.footer {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  color: var(--dart-text);
+}
+
+.footer .link {
+  color: var(--second-text-color);
+}
+
+.footer .link:hover,
+.footer .link:focus {
+  color: var(--accent-color);
+}
