@@ -13,6 +13,11 @@
   --online-background: #191c26;
   --primary-font-family: "Open Sans", sans-serif;
   --title-font-family: "Raleway", sans-serif;
+
+  --padding-main: 20px;
+
+  --padding-container-left: 15px;
+  --padding-container-top: 120px;
 }
 
 /* Global elements */
@@ -26,8 +31,45 @@ body {
   color: var(--primary-text-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  outline: 1px solid tomato;
+}
+
+.container {
+  padding: var(--padding-container-top) var(--padding-container-left);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1200px;
+}
+
+.container .section-text + .section-text {
+  margin-top: var(--padding-main);
+}
+
 /* General settings for list */
 .list {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
@@ -59,12 +101,20 @@ body {
 
   text-transform: uppercase;
 }
+
 .sub-title.dark {
   color: var(--sub-title-text);
 }
 
-/* General settings for button */
+/**
+  |============================
+  |General settings for button 
+  |============================
+*/
 .button {
+  min-width: 160px;
+  padding: 12px 20px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -88,7 +138,11 @@ body {
   background-color: var(--accent-color);
 }
 
-/* Section Header */
+/**
+  |============================
+  |Section Header 
+  |============================
+*/
 .header {
   font-weight: 600;
   font-size: 12px;
@@ -96,11 +150,35 @@ body {
   letter-spacing: 0.1em;
 
   color: var(--white-color);
+
   /* TODO Delete background-color */
   background-color: var(--dart-text);
 }
 
+.header .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .site-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.i-contact .item + .item {
+  margin-left: 40px;
+}
+
 .header .link {
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
   color: inherit;
 }
 .header .link:hover,
@@ -108,11 +186,53 @@ body {
   color: var(--accent-color);
 }
 
-/* Section Hero */
+/* Section  Other contacts */
+.container.hero-socials {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.other-contact > .list {
+  display: flex;
+  align-items: center;
+}
+.other-contact .link-social {
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.other-contact .title {
+  display: none;
+}
+
+.other-contact .logo {
+  display: block;
+  padding: 0;
+}
+
+.socials .item:nth-last-child(2) {
+  margin-left: auto;
+}
+
+/**
+  |============================
+  |Section Hero 
+  |============================
+*/
 .hero {
+  /* TODO видалити */
+  width: 1070px;
+  height: 680px;
+  background-color: var(--online-background);
+  margin-left: auto;
+
   color: var(--dart-text);
 }
 
+.hero .hero-content {
+  padding: 272px 526px 208px 100px;
+}
 .hero .link {
   font-weight: 600;
   font-size: 11px;
@@ -136,19 +256,86 @@ body {
 
   color: var(--white-color);
 }
+/**
+  |============================
+  |Section About 
+  |============================
+*/
+.about .container {
+  display: flex;
+  gap: 30px;
+}
 
-/* Section About */
+.about .about-image {
+  display: flex;
+  gap: 30px;
+}
+
+.about-image .img {
+  width: 270px;
+}
+
 .about .about-text {
   font-size: 14px;
   line-height: 1.86;
 }
-/* Section Price */
+
+.about .button {
+  margin-top: 42px;
+}
+
+.about .about-content {
+  /* width: 570px; */
+  flex-basis: 570px;
+  padding-right: 100px;
+}
+
+/**
+  |============================
+  |  Section Price 
+  |============================
+*/
 .price {
+  /* TODO deleted */
+  background-color: var(--online-background);
   color: var(--dart-text);
 }
 
-/* Section advantage */
-.advantage .list {
+.price .price-list {
+  margin-top: 44px;
+}
+
+.price .button {
+  display: block;
+
+  margin-top: 44px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.price .price-list {
+  display: flex;
+}
+
+.price-list > .item {
+  flex-basis: 570px;
+  padding: 30px 22px 30px 20px;
+}
+
+.price-list > .item + .item {
+  margin-left: 30px;
+}
+.price-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+  |============================
+  |Section advantage 
+  |============================
+*/
+.advantage .item {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -174,7 +361,26 @@ body {
 
   color: var(--accent-color);
 }
+.advantage .container {
+  display: flex;
+}
 
+.advantage .list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-right: 100px;
+  gap: 30px;
+}
+.advantage .content {
+  flex-basis: 600px;
+  padding: 9px 70px 109px 30px;
+}
+
+.advantage .item {
+  flex-basis: 170px;
+  padding: 20px 24px;
+}
 /* Section Barbers */
 .barbers {
   background-color: var(--second-background-color);
