@@ -1,1 +1,1 @@
-# goit-barbeshop-1
+# goit-barbeshop-3 Flex
