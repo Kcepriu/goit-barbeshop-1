@@ -193,12 +193,12 @@ img {
   justify-content: space-between;
 }
 
-.header .site-nav {
+.site-nav {
   display: flex;
   gap: 30px;
 }
 
-.i-contact .item + .item {
+.i-contact-item + .i-contact-item {
   margin-left: 40px;
 }
 
@@ -224,7 +224,7 @@ img {
   padding-bottom: 0;
 }
 
-.other-contact > .list {
+.other-contact-list {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -276,7 +276,7 @@ img {
   color: var(--dart-text);
 }
 
-.hero .hero-content {
+.hero-content {
   padding: 272px 526px 208px 100px;
 }
 
@@ -372,7 +372,7 @@ img {
   display: flex;
 }
 
-.advantage .list {
+.advantage-list {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -481,7 +481,7 @@ img {
   | Section Portfolio
   |============================
 */
-.portfolio .list {
+.portfolio-list {
   display: flex;
   gap: 30px;
 }
@@ -499,18 +499,18 @@ img {
   background-color: var(--online-background);
 }
 
-.other .online-contact {
-  display: flex;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 /**
   |============================
   | Section Online booking 
   |============================
 */
-.online {
+.online-contact {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.forma-online {
   background-color: var(--online-background);
   flex-basis: 600px;
   padding-top: 130px;
@@ -528,7 +528,7 @@ img {
 }
 
 .contacts,
-.contacts .link {
+.contact-link {
   font-size: 18px;
   line-height: 1.67;
 
@@ -537,11 +537,20 @@ img {
   color: var(--dart-text);
 }
 
-.contacts .list {
+.contact-link-map {
+  font-weight: 700;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+
+.contact-list {
   margin-top: 40px;
 }
 
-.contacts .item + .item {
+.contact-item + .contact-item {
   margin-top: var(--padding-main);
 }
 
@@ -554,18 +563,9 @@ img {
   margin-top: var(--padding-main);
 }
 
-.contacts .link.map {
-  font-weight: 700;
-}
-
-.contacts .link:hover,
-.contacts .link:focus {
-  color: var(--accent-color);
-}
-
 /**
   |============================
-  | Section Footer 
+  | Section Footer  
   |============================
 */
 .footer {
@@ -576,7 +576,7 @@ img {
   color: var(--dart-text);
 }
 
-.footer .footer-inner {
+.footer-wrap {
   display: flex;
   justify-content: space-between;
 
@@ -584,16 +584,16 @@ img {
   padding-bottom: 56px;
 }
 
-.footer .footer-inner > .list {
+.footer-list {
   display: flex;
   gap: 40px;
 }
 
-.footer .link {
+.footer-link {
   color: var(--second-text-color);
 }
 
-.footer .link:hover,
-.footer .link:focus {
+.footer-link:hover,
+.footer-link:focus {
   color: var(--accent-color);
 }
