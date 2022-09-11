@@ -63,7 +63,7 @@ img {
   width: 1200px;
 }
 
-.container .section-text + .section-text {
+.section-text + .section-text {
   margin-top: var(--padding-main);
 }
 
@@ -96,6 +96,19 @@ img {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /**
   |============================
   |General settings for Title 
@@ -111,7 +124,7 @@ img {
   color: var(--second-text-color);
 }
 
-.title.white-title {
+.title-white {
   color: var(--white-color);
 }
 
@@ -156,7 +169,7 @@ img {
   border-radius: 25px;
 }
 
-.button.white {
+.btn-white {
   color: var(--white-color);
 }
 
@@ -219,7 +232,7 @@ img {
   | Section  Other contacts
   |============================
 */
-.container.hero-socials {
+.hero-socials {
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -229,17 +242,13 @@ img {
   align-items: center;
   gap: 40px;
 }
-.other-contact .link-social {
+.link-social {
   display: inline-block;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.other-contact .title {
-  display: none;
-}
-
-.other-contact .logo {
+.link-logo {
   display: block;
   padding: 0;
 }
@@ -248,7 +257,7 @@ img {
   margin-left: auto;
 }
 
-.other-contact .link {
+.link-social {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -256,8 +265,8 @@ img {
   color: var(--second-text-color);
 }
 
-.other-contact .link:hover,
-.other-contact .link:focus {
+.link-social:hover,
+.link-social:focus {
   color: var(--accent-color);
 }
 
@@ -290,37 +299,33 @@ img {
 
   color: var(--white-color);
 }
+
 /**
   |============================
   |Section About 
   |============================
 */
-.about .container {
+.about-container {
   display: flex;
   gap: 30px;
 }
 
-.about .about-image {
+.about-images {
   display: flex;
   gap: 30px;
 }
 
-.about-image .img {
-  width: 270px;
-}
-
-.about .about-text {
+.about-text {
   font-size: 14px;
   line-height: 1.86;
 }
 
-.about .button {
+.about-btn {
   margin-top: 42px;
 }
 
-.about .about-content {
-  /* width: 570px; */
-  flex-basis: 570px;
+.about-content {
+  flex-basis: 48%;
   padding-right: 100px;
 }
 
@@ -335,13 +340,13 @@ img {
   color: var(--dart-text);
 }
 
-.price .price-list {
+.price-list {
   display: flex;
   gap: 30px;
   margin-top: 44px;
 }
 
-.price .button {
+.price-btn {
   display: block;
 
   margin-top: 44px;
@@ -363,12 +368,13 @@ img {
   flex-direction: column;
   gap: var(--padding-main);
 }
+
 /**
   |============================
   |Section advantage 
   |============================
 */
-.advantage .container {
+.advantage-cantainer {
   display: flex;
 }
 
@@ -385,7 +391,7 @@ img {
   outline: 1px solid tomato;
 }
 
-.advantage .item {
+.advantage-item {
   /* display: block; */
   flex-basis: 170px;
   padding: 20px 24px;
@@ -397,11 +403,8 @@ img {
   text-align: center;
   background-color: red;
 }
-.advantage .item-up {
-  /* margin-top: 30px; */
-}
 
-.advantage .feature {
+.advantage-feature {
   margin-bottom: 6px;
 
   font-weight: 700;
@@ -412,7 +415,7 @@ img {
   letter-spacing: 0.05em;
 }
 
-.advantage .plus {
+.plus {
   font-weight: 600;
   font-size: 16px;
   vertical-align: super;
@@ -422,7 +425,7 @@ img {
   color: var(--accent-color);
 }
 
-.advantage .content {
+.advantage-content {
   flex-basis: 600px;
   padding: 9px 70px 109px 30px;
 }
@@ -436,7 +439,7 @@ img {
   background-color: var(--second-background-color);
 }
 
-.barbers .type-barber {
+.type-barber {
   font-size: 14px;
   line-height: 1.36;
 
@@ -444,35 +447,40 @@ img {
   color: var(--accent-color);
 }
 
-.barbers .link:hover,
-.barbers .link:focus {
+.barber-socials .link:hover,
+.barber-socials .link:focus {
   color: var(--accent-color);
 }
 
-.barbers .title {
+.barbers-title {
   margin-bottom: 44px;
 }
 
 .barbers .img {
   margin-bottom: 30px;
 }
-.barbers .cards {
+
+.barber-cards {
   display: flex;
   gap: 30px;
 }
-.barbers .card {
+
+.barber-card {
   align-items: center;
 }
-.barbers .card-title {
+
+.barber-card-title {
   text-align: center;
   margin-bottom: 8px;
 }
-.barbers .barber-socials {
+
+.barber-socials {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-.barbers .type-barber {
+
+.type-barber {
   margin-bottom: 30px;
 }
 
@@ -559,7 +567,7 @@ img {
   margin-top: 70px;
 }
 
-.contacts .text-work-time {
+.text-work-time {
   margin-top: var(--padding-main);
 }
 

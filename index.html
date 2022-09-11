@@ -44,7 +44,7 @@
           <a class="link item i-contact-item" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="button white item i-contact-item" type="button">
+          <button class="button btn-white item i-contact-item" type="button">
             Online-booking
           </button>
         </div>
@@ -55,10 +55,10 @@
       <div class="container hero-socials">
         <!-- Other contacts -->
         <section class="other-contact">
-          <h2 class="title">Other contacts</h2>
+          <h2 class="title visually-hidden">Other contacts</h2>
           <ul class="socials list other-contact-list">
             <li class="item">
-              <a class="link logo" href="/index.html"
+              <a class="link link-logo" href="/index.html"
                 ><img
                   src="./images/logo-barbershop.svg"
                   alt="Logo BarberShop"
@@ -91,8 +91,8 @@
 
       <!-- About     -->
       <section class="about" id="about">
-        <div class="container">
-          <ul class="list about-image">
+        <div class="container about-container">
+          <ul class="list about-images">
             <li class="item">
               <img
                 class="img"
@@ -124,7 +124,9 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="button" type="button">Online-booking</button>
+            <button class="button about-btn" type="button">
+              Online-booking
+            </button>
           </div>
         </div>
       </section>
@@ -135,9 +137,10 @@
           <p class="sub-title dark section-text">
             Spend your time with the best masters
           </p>
-          <h2 class="title white-title section-text">Services and prices</h2>
+          <h2 class="title title-white section-text">Services and prices</h2>
 
           <ul class="list price-list">
+            <!-- TODO переробити в один list застосувавши wrap -->
             <li class="item">
               <ul class="list price-column">
                 <li class="item price-line">
@@ -179,35 +182,41 @@
               </ul>
             </li>
           </ul>
-          <button class="button white" type="button">Online-booking</button>
+          <button class="button btn-white price-btn" type="button">
+            Online-booking
+          </button>
         </div>
       </section>
 
       <!-- чому ми -->
       <section class="advantage">
-        <div class="container">
+        <div class="container advantage-cantainer">
           <ul class="list advantage-list">
-            <li class="item">
-              <p class="feature">600<sup class="plus">+</sup></p>
+            <li class="item advantage-item">
+              <p class="advantage-feature">600<sup class="plus">+</sup></p>
               <p>Satisfied customers per day</p>
             </li>
-            <li class="item item-up">
-              <p class="feature">50<sup class="plus">+</sup></p>
+
+            <li class="item item-up advantage-item">
+              <p class="advantage-feature">50<sup class="plus">+</sup></p>
               <p>Awards for excellent service</p>
             </li>
-            <li class="item">
-              <p class="feature">20<sup class="plus">+</sup></p>
+
+            <li class="item advantage-item">
+              <p class="advantage-feature">20<sup class="plus">+</sup></p>
               <p>
                 Kyiv’s best <br />
                 barbers
               </p>
             </li>
-            <li class="item">
-              <p class="feature">100<sup class="plus">+</sup></p>
+
+            <li class="item advantage-item">
+              <p class="advantage-feature">100<sup class="plus">+</sup></p>
               <p>Gifts for regular customers</p>
             </li>
           </ul>
-          <div class="content">
+
+          <div class="advantage-content">
             <p class="sub-title section-text">Old traditional school</p>
             <h2 class="title section-text">¿Why people come <br />to us?</h2>
             <p class="section-text">
@@ -224,16 +233,16 @@
           <p class="sub-title section-text">
             For true enjoyers of the atmosphere
           </p>
-          <h2 class="title section-text">Our barbers</h2>
-          <ul class="list cards">
-            <li class="item card">
+          <h2 class="title barbers-title section-text">Our barbers</h2>
+          <ul class="list barber-cards">
+            <li class="item barber-card">
               <img
                 class="img"
                 src="./images/john-smith.jpg"
                 alt="John Smith works"
                 width="370"
               />
-              <h3 class="card-title">John Smith</h3>
+              <h3 class="barber-card-title">John Smith</h3>
               <p class="type-barber">Extreme Barber</p>
               <ul class="list barber-socials">
                 <li class="item">
@@ -250,14 +259,14 @@
                 </li>
               </ul>
             </li>
-            <li class="item card">
+            <li class="item barber-card">
               <img
                 class="img"
                 src="./images/michele-doe.jpg"
                 alt="Michele Doe works"
                 width="370"
               />
-              <h3 class="card-title">Michele Doe</h3>
+              <h3 class="barber-card-title">Michele Doe</h3>
               <p class="type-barber">Extreme Barber</p>
               <ul class="list barber-socials">
                 <li class="item">
@@ -274,14 +283,14 @@
                 </li>
               </ul>
             </li>
-            <li class="item card">
+            <li class="item barber-card">
               <img
                 class="img"
                 src="./images/alan-black.jpg"
                 alt="Alan Black works"
                 width="370"
               />
-              <h3 class="card-title">Alan Black</h3>
+              <h3 class="barber-card-title">Alan Black</h3>
               <p class="type-barber">Extreme Barber</p>
               <ul class="list barber-socials">
                 <li class="item">
@@ -329,14 +338,14 @@
         <div class="container online-contact">
           <!-- Online-booking -->
           <section class="forma-online">
-            <h2 class="title white-title">Online-booking</h2>
+            <h2 class="title title-white">Online-booking</h2>
             <!-- TODO form -->
-            <button class="button white">Send</button>
+            <button class="button btn-white">Send</button>
           </section>
 
           <!-- контакти -->
           <section class="contacts" id="contacts">
-            <h2 class="title white-title">Contacts</h2>
+            <h2 class="title title-white">Contacts</h2>
             <address>
               <ul class="list contact-list">
                 <li class="contact-item">
@@ -381,4 +390,3 @@
     </footer>
   </body>
 </html>
-<!-- я лого потрібно ввигадувати alt? -->
