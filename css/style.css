@@ -340,10 +340,22 @@ img {
   color: var(--dart-text);
 }
 
+.wrap-price-list {
+  margin-top: 44px;
+  padding: 30px 20px;
+}
+
 .price-list {
   display: flex;
-  gap: 30px;
-  margin-top: 44px;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+.price-line {
+  width: calc((100% - 30px) / 2);
+  display: flex;
+  justify-content: space-between;
 }
 
 .price-btn {
@@ -352,21 +364,6 @@ img {
   margin-top: 44px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.price-list > .item {
-  flex-basis: 570px;
-  padding: 30px 22px 30px 20px;
-}
-
-.price-line {
-  display: flex;
-  justify-content: space-between;
-}
-.price-column {
-  display: flex;
-  flex-direction: column;
-  gap: var(--padding-main);
 }
 
 /**
