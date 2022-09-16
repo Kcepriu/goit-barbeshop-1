@@ -199,6 +199,7 @@ img {
 .header .container {
   padding-top: 0;
   padding-bottom: 0;
+  padding-left: 200px;
 }
 
 .main-nav {
@@ -235,13 +236,16 @@ img {
 .hero-socials {
   padding-top: 0;
   padding-bottom: 0;
+  display: flex;
 }
 
 .other-contact-list {
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* writing-mode: vertical-rl; */
   gap: 40px;
 }
+
 .link-social {
   display: inline-block;
   padding-top: 8px;
@@ -279,6 +283,7 @@ img {
   /* TODO видалити */
   width: 1070px;
   height: 680px;
+  background-image: ;
   background-color: var(--online-background);
   margin-left: auto;
 
@@ -378,27 +383,38 @@ img {
 .advantage-list {
   display: flex;
   flex-wrap: wrap;
+
   align-items: flex-start;
+
   padding-left: 100px;
   padding-right: 100px;
-  gap: 30px;
 
   flex-basis: 570px;
-
-  outline: 1px solid tomato;
 }
 
 .advantage-item {
-  /* display: block; */
   flex-basis: 170px;
+  height: 133px;
+
   padding: 20px 24px;
 
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   color: var(--second-text-color);
+
   text-align: center;
-  background-color: red;
+  background-color: var(--second-background-color);
+}
+
+.advantage-item + .advantage-item {
+  margin-top: 30px;
+}
+.advantage-item:nth-child(3) {
+  margin-top: 0;
+}
+.advantage-item:nth-child(2n) {
+  margin-left: 30px;
 }
 
 .advantage-feature {
@@ -424,7 +440,7 @@ img {
 
 .advantage-content {
   flex-basis: 600px;
-  padding: 9px 70px 109px 30px;
+  padding: 9px 70px 9px 30px;
 }
 
 /**
