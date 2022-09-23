@@ -19,6 +19,9 @@
 
   --padding-container-horizontal: 15px;
   --padding-container-vertical: 120px;
+
+  --primary-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --primary-duration: 250ms;
 }
 
 /**
@@ -171,6 +174,9 @@ img {
 
   border: 1px solid #ff6c00;
   border-radius: 25px;
+
+  transition: color var(--primary-duration) var(--primary-timing-function),
+    background-color var(--primary-duration) var(--primary-timing-function);
 }
 
 .btn-white {
@@ -213,6 +219,8 @@ img {
 }
 
 .link-logo {
+  display: block;
+  padding: 0;
   width: 68px;
 }
 
@@ -243,10 +251,12 @@ img {
   padding-bottom: 20px;
 
   color: inherit;
+
+  transition: color var(--primary-duration) var(--primary-timing-function);
 }
 
-.header .link:hover,
-.header .link:focus {
+.link-header:hover,
+.link-header:focus {
   color: var(--accent-color);
 }
 
@@ -281,31 +291,22 @@ img {
   padding-left: 34px;
 }
 
-.link-social {
+.link-hero-social {
   display: inline-block;
   padding-top: 27px;
   padding-bottom: 27px;
-}
 
-.link-logo {
-  display: block;
-  padding: 0;
-}
-
-.socials .item:nth-last-child(2) {
-  margin-left: auto;
-}
-
-.link-social {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
 
   color: var(--second-text-color);
+
+  transition: color var(--primary-duration) var(--primary-timing-function);
 }
 
-.link-social:hover,
-.link-social:focus {
+.link-hero-social:hover,
+.link-hero-social:focus {
   color: var(--accent-color);
 }
 
@@ -433,7 +434,6 @@ img {
   flex-grow: 1;
   height: 1px;
   background: currentColor;
-  /* order: 3; */
 }
 
 .price-item-text:last-child {
@@ -508,6 +508,8 @@ img {
 .plus {
   font-weight: 600;
   font-size: 16px;
+  line-height: 1.38;
+
   vertical-align: super;
 
   text-align: center;
@@ -575,7 +577,10 @@ img {
 
   color: var(--second-text-color);
   background-color: var(--white-color);
+
+  transition: color var(--primary-duration) var(--primary-timing-function);
 }
+
 .link-socials:hover,
 .link-socials:focus {
   color: var(--accent-color);
@@ -654,6 +659,7 @@ img {
 
 .contact-link {
   display: flex;
+  transition: color var(--primary-duration) var(--primary-timing-function);
 }
 
 .contact-link:hover,
@@ -717,6 +723,11 @@ img {
   gap: 40px;
 }
 
+.footer-link {
+  color: inherit;
+  transition: color var(--primary-duration) var(--primary-timing-function);
+}
+
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
@@ -726,10 +737,6 @@ img {
   align-items: center;
   margin-right: 0;
   color: var(--second-text-color);
-}
-
-.footer-link {
-  color: inherit;
 }
 
 .socseti-list::before {
