@@ -386,9 +386,54 @@
       <!-- Інше -->
       <div class="other online-contact">
         <!-- Online-booking -->
-        <section class="forma-online">
-          <h2 class="title title-white">Online-booking</h2>
-          <button class="button btn-white">Send</button>
+        <section class="section-online">
+          <h2 class="title title-white title-forma">Online-booking</h2>
+
+          <form name="send-message">
+            <div class="wrap-form-contact">
+              <div class="wrap-label">
+                <input
+                  class="input-form"
+                  type="text"
+                  id="input-name"
+                  placeholder=" "
+                />
+                <label class="label-form label-contact" for="input-name"
+                  >Name<span>*</span></label
+                >
+              </div>
+
+              <div class="wrap-label">
+                <input
+                  class="input-form"
+                  type="tel"
+                  id="input=phone"
+                  placeholder=" "
+                />
+                <label class="label-form label-contact" for="input=phone"
+                  >Phone<span>*</span></label
+                >
+              </div>
+            </div>
+
+            <div class="wrap-label">
+              <textarea
+                class="input-form input-message"
+                name="message"
+                cols="30"
+                rows="5"
+                id="input-message"
+                placeholder=" "
+              ></textarea>
+              <label class="label-form label-message" for="input-message"
+                >Message
+              </label>
+            </div>
+          </form>
+
+          <button class="button btn-white btn-submit" type="submit">
+            Send
+          </button>
         </section>
 
         <!-- контакти -->
